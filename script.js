@@ -5,7 +5,10 @@ const btnLogin = document.getElementById("btn-login");
 let alertParagraph = document.createElement("p");
 
 btnLogin.addEventListener("click", function(){
-    pushAlert("Du har angett fel användarnamn eller lösenord");
+    if(informationIsValid())
+    {
+        console.log("true");
+    }
 });
 
 function pushAlert(messageStr) {
@@ -13,4 +16,16 @@ function pushAlert(messageStr) {
 
     alertParagraph.textContent = messageStr;
     divConatiner.appendChild(alertParagraph);
+}
+
+function informationIsValid()
+{
+    if(inputUsername.value === "test" && inputPassword.value === "1234")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
