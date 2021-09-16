@@ -23,7 +23,6 @@ btnLogin.addEventListener("click", function() {
         SaveLoginState();
         LoginScreenIsHidden(true);
         applyWelcomeScreen();
-        console.log("true");
     }
     else {
         PushAlertMessage("Du har angett fel användarnamn eller lösenord");
@@ -52,7 +51,7 @@ function InformationIsValid(_username, _password) {
 // Ger ett felmeddelande ifall inkorrekta uppgifter har angivits
 function PushAlertMessage(messageStr) {
     alertParagraph.textContent = messageStr;
-    divConatiner.appendChild(alertParagraph);
+    loginContainer.appendChild(alertParagraph);
 }
 
 // Skapar en välkomstsida för användaren vi inloggning
@@ -84,4 +83,8 @@ function SaveLoginState() {
 // Tar bort inloggningssidan
 function RemoveWelcomeScreen() {
     welcomeContainer.remove();
+    
+    if(alertParagraph) {
+        alertParagraph.remove();
+    }
 }
