@@ -1,9 +1,9 @@
 # skapa-en-inloggningssida
 Inlämningsuppgift
 
---Inloggningsuppgifter--\
----Användarnamn: test\
----Lösenord: 1234
+Inloggningsuppgifter:\
+Användarnamn: test\
+Lösenord: 1234
 
 Min reflektion:
 
