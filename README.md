@@ -5,9 +5,13 @@ I denna applikation finns två inloggningsalternativ.
 Användarna är till för att visa att välkomstsidan är 
 unik för varje användare.
 
---Användare 1--           --Användare 2--
-Användarnamn: test        Användarnamn: test2
-Lösenord: 1234            lösenord: 5678
+--Användare 1--   
+Användarnamn: test
+Lösenord: 1234    
+
+--Användare 2--
+Användarnamn: test2
+lösenord: 5678
 
 Min reflektion:
 
