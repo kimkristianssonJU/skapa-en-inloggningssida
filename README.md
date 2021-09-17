@@ -5,7 +5,7 @@ I denna applikation finns två inloggningsalternativ.
 Användarna är till för att visa att välkomstsidan är 
 unik för varje användare.
 
---Användare 1--/
+--Användare 1--\
 Användarnamn: test
 Lösenord: 1234    
 
