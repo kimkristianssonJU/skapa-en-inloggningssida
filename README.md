@@ -1,17 +1,9 @@
 # skapa-en-inloggningssida
 Inlämningsuppgift
 
-I denna applikation finns två inloggningsalternativ.
-Användarna är till för att visa att välkomstsidan är 
-unik för varje användare.
-
---Användare 1--\
-Användarnamn: test\
-Lösenord: 1234\
-\
---Användare 2--\
-Användarnamn: test2\
-lösenord: 5678
+--Inloggningsuppgifter--\
+---Användarnamn: test\
+---Lösenord: 1234
 
 Min reflektion:
 
