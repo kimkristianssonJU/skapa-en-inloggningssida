@@ -9,8 +9,8 @@ const customCreateElement = (tag, className, parent) => {
     return element;
 }
 
-const saveToLocalStorage = (user) => {
-    localStorage.setItem(varificationKey, user);
+const saveToLocalStorage = (userId) => {
+    localStorage.setItem(varificationKey, userId);
 }
 
 let alertMsg = {
@@ -47,11 +47,11 @@ let loginScreen = {
             this.loginBtn.textContent = "Logga In";
 
             this.loginBtn.addEventListener("click", async() => {
-                username = await validateUser(this.inputUsername, this.inputPassword);
-                if (username) {
-                    welcomeScreen.setActive(true, username);
+                userId = await validateUser(this.inputUsername, this.inputPassword);
+                if (userId) {
+                    welcomeScreen.setActive(true, userId);
                     loginScreen.setActive(false, null);
-                    localStorage.setItem(varificationKey, username);
+                    localStorage.setItem(varificationKey, userId);
                     alertMsg.clear();
                 }
                 else {
@@ -72,14 +72,13 @@ let welcomeScreen = {
     welcomeTitle: null,
     logoutBtn: null,
     isActive: false,
-    setActive: (setActive, username) => {
+    setActive: (setActive, userId) => {
         if (setActive) {
             this.welcomeTitle = customCreateElement("h1", "welcome-title", contentContainer);
             this.logoutBtn = customCreateElement("button", "login-button", contentContainer);
-            this.welcomeTitle.textContent = "Välkommen " + username;
+            this.welcomeTitle.textContent = "Välkommen " + userId;
             this.logoutBtn.textContent = "Logga Ut";
             this.isActive = true;
-            console.log("ossk");
 
 
             this.logoutBtn.addEventListener("click", () => {
@@ -113,8 +112,8 @@ else {
 validateUser = async (usernameInput, passwordInput) => {
     const users = await loadUsers();
     for (let user of users) {
-        if (user.username === usernameInput.value && user.password === passwordInput.value) {
-            return user.username;
+        if (user.username.toLowerCase() === usernameInput.value.toLowerCase() && user.password === passwordInput.value) {
+            return user.user_id;
         }
     }
     return null;

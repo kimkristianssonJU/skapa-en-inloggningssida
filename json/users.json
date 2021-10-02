@@ -1,18 +1,23 @@
 [
     {
         "username":"kalle123",
-        "password":"ellak321"
+        "password":"ellak321",
+        "user_id":"Karl Svensson"
     },{
         "username":"test",
-        "password":"test"
+        "password":"test",
+        "user_id":"Test User"
     },{
         "username":"nuvilljagloggain",
-        "password":"dramigbaklänges"
+        "password":"dramigbaklänges",
+        "user_id":"Kim Kristiansson"
     },{
         "username":"UPPERCASElowercase",
-        "password":"camelCase"
+        "password":"camelCase",
+        "user_id":"Fred Flinta"
     },{
         "username":"ettor",
-        "password":"nollor"
+        "password":"nollor",
+        "user_id":"Camilla Läckberg"
     }
 ]
